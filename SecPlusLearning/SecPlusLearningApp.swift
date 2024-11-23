@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct SecPlusLearningApp: App {
+struct SecurityPlusAppApp: App {
+    @StateObject private var questionController = QuestionController()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(questionController)
         }
     }
 }
